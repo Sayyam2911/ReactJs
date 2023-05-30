@@ -1,12 +1,13 @@
 import React from 'react'
 import Header from "./Header";
+import Custom from "./Custom";
 
 function App(){
     return <div>
         <Header />
 
         <div className="dsjdsj" id="content">
-            <p>Hello {2+2 } There..</p>
+         <Custom />
         </div>
     </div>
 }
