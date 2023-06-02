@@ -1,11 +1,17 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 function Custom(props){
 
     const [counter, setCounter] = useState(0)
+
+    useEffect(() => {
+        console.log('I Ran')
+    },[counter])
+
     function increase(){
         setCounter(oldCounterValue => oldCounterValue+1)
     }
+
     function decrease(){
         setCounter(oldCounterValue => oldCounterValue -1)
     }
