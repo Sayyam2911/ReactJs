@@ -1,19 +1,19 @@
-import React from "react";
-
-console.log("hello" && "sayyam")
-let age = 20
+import React, {useState} from "react";
 
 function Custom(props){
 
-    function button_click_func(){
-        console.log("I was Pressed")
+    const [counter, setCounter] = useState(0)
+    function increase(){
+        setCounter(oldCounterValue => oldCounterValue+1)
+    }
+    function decrease(){
+        setCounter(oldCounterValue => oldCounterValue -1)
     }
 
     return <div>
-        <h1>Hello There</h1>
-        <button onClick={button_click_func}> Click Me </button>
-        {age > 18 ? <p>Which may be visible</p> : null}
+        <h1>Counter : {counter}</h1>
+        <button onClick={increase}>Increase the Counter</button>
+        <button onClick={decrease}>Decrease the Counter</button>
     </div>
 }
-
 export default Custom
